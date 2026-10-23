@@ -1,0 +1,155 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./assets/images/favicon-32x32.png"
+    />
+
+    <title>Frontend Mentor | Contact form</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,200..800;1,200..800&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="assets/css/main.css" />
+
+    <script type="module" src="assets/js/script.js"></script>
+  </head>
+  <body>
+    <form action="#" method="post" id="contact-form" novalidate>
+      <h1 class="title">Contact Us</h1>
+      <fieldset class="form-row">
+        <div class="field">
+          <div class="field-header">
+            <label class="field-label" for="first-name">First Name</label>
+            <span class="required-field-star">*</span>
+          </div>
+          <input
+            type="text"
+            class="field-input"
+            id="first-name"
+            name="first-name"
+          />
+          <span class="error-message" id="first-name-error-message"
+            >This field is required</span
+          >
+        </div>
+        <div class="field">
+          <div class="field-header">
+            <label class="field-label" for="last-name">Last Name</label>
+            <span class="required-field-star">*</span>
+          </div>
+          <input
+            type="text"
+            class="field-input"
+            id="last-name"
+            name="last-name"
+          />
+          <span class="error-message" id="last-name-error-message"
+            >This field is required</span
+          >
+        </div>
+      </fieldset>
+
+      <fieldset class="form-row">
+        <div class="field">
+          <div class="field-header">
+            <label class="field-label" for="email">Email Address</label>
+            <span class="required-field-star">*</span>
+          </div>
+          <input
+            type="email"
+            class="field-input"
+            placeholder="email@example.com"
+            id="email"
+            name="email"
+          />
+          <span class="error-message" id="email-error-message"
+            >Please enter a valid email address</span
+          >
+        </div>
+      </fieldset>
+
+      <div class="field-header">
+        <label class="field-label" for="first-name">Query Type</label>
+        <span class="required-field-star">*</span>
+      </div>
+
+      <fieldset class="form-row">
+        <label class="radio-field">
+          <input
+            type="radio"
+            class="radio-input"
+            id="general-enquiry"
+            name="query-type"
+            value="General Enquiry"
+          />
+          <span class="query-type">General Enquiry</span>
+        </label>
+        <label class="radio-field">
+          <input
+            type="radio"
+            class="radio-input"
+            id="support-request"
+            name="query-type"
+            value="Support Request"
+          />
+          <span class="query-type">Support Request</span>
+        </label>
+      </fieldset>
+
+      <span class="error-message" id="query-type-error-message"
+        >Please select a query type</span
+      >
+
+      <fieldset class="form-row">
+        <div class="field">
+          <div class="field-header">
+            <label class="field-label" for="message">Message</label>
+            <span class="required-field-star">*</span>
+          </div>
+          <textarea
+            class="field-input"
+            id="message"
+            name="message"
+            rows="4"
+          ></textarea>
+          <span class="error-message" id="message-error-message"
+            >This required</span
+          >
+        </div>
+      </fieldset>
+
+      <label class="contact-permission">
+        <div class="input-wrapper">
+          <input type="checkbox" name="permission" id="permission" />
+          <span class="contact-permission-text"
+            >I consent to being contacted by the team
+            <span class="required-field-star">*</span></span
+          >
+        </div>
+        <span class="error-message" id="permission-error-message"
+          >To submit this form, please consent to being contacted</span
+        >
+      </label>
+      <button type="submit">Submit</button>
+    </form>
+
+    <section class="success-submit-message" id="success-submit-message">
+      <div class="success-title">
+        <img src="assets/images/icon-success-check.svg" alt="checkbox-check" />
+        <span>Message Sent!</span>
+      </div>
+      <p>Thanks for completing the form. we'll be in touch soon!</p>
+    </section>
+  </body>
+</html>
